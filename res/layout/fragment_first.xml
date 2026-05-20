@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_gradient"
+    tools:context=".FirstFragment">
+
+    <!-- Floating Clouds -->
+    <ImageView android:id="@+id/cloud1" android:layout_width="90dp" android:layout_height="36dp" android:layout_marginTop="48dp" android:alpha="0.72" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_cloud" android:contentDescription="Cloud" />
+    <ImageView android:id="@+id/cloud3" android:layout_width="110dp" android:layout_height="40dp" android:layout_marginTop="120dp" android:alpha="0.72" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_cloud" android:contentDescription="Cloud" />
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView android:id="@+id/gameTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Oh My Little Multi 🌈" android:textColor="@color/text_dark" android:textSize="28sp" android:textStyle="bold" android:elevation="2dp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Multiplication Table Game" android:textColor="@color/text_mid" android:textSize="12sp" android:textStyle="bold" android:letterSpacing="0.05" />
+    </LinearLayout>
+
+    <!-- Score Row -->
+    <LinearLayout
+        android:id="@+id/scoreRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/headerGroup">
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/score_pill_bg" android:elevation="4dp" android:paddingHorizontal="14dp" android:paddingVertical="6dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏆" android:textSize="18sp" />
+            <TextView android:id="@+id/scoreValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:text="0" android:textColor="@color/text_dark" android:textSize="18sp" android:textStyle="bold" />
+        </LinearLayout>
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/score_pill_bg" android:elevation="4dp" android:paddingHorizontal="14dp" android:paddingVertical="6dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔥" android:textSize="18sp" />
+            <TextView android:id="@+id/streakValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:text="0" android:textColor="@color/text_dark" android:textSize="18sp" android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Mascots Area -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mascotsArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/scoreRow">
+        <LinearLayout android:id="@+id/drakoContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:gravity="center" android:orientation="vertical" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:id="@+id/drakoBubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bubble_bg" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="You got this! 💪" android:textSize="10sp" android:textStyle="bold" />
+            <ImageView android:id="@+id/drakoSvg" android:layout_width="100dp" android:layout_height="100dp" app:srcCompat="@drawable/drako" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/owlCard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="20dp" android:gravity="center" android:orientation="vertical" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:id="@+id/owlBubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bubble_bg" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="Think carefully! 🦉" android:textSize="10sp" android:textStyle="bold" />
+            <ImageView android:id="@+id/owlSvg" android:layout_width="100dp" android:layout_height="100dp" app:srcCompat="@drawable/ic_owl" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Question Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/questionCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/mascotsArea">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <TextView android:id="@+id/questionProgressLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginBottom="6dp" android:text="🎯 Question 1 of 30" android:textColor="@color/text_mid" android:textSize="12sp" android:textStyle="bold" android:textAllCaps="true" android:letterSpacing="0.1" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="horizontal">
+                <TextView android:id="@+id/num1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" android:textColor="@color/text_dark" android:textSize="52sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginHorizontal="10dp" android:text="×" android:textColor="@color/pink_dark" android:textSize="42sp" android:textStyle="bold" />
+                <TextView android:id="@+id/num2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" android:textColor="@color/text_dark" android:textSize="52sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginHorizontal="10dp" android:text="=" android:textColor="@color/pink_dark" android:textSize="42sp" android:textStyle="bold" />
+                <FrameLayout android:layout_width="80dp" android:layout_height="70dp" android:background="@drawable/eq_answer_bg">
+                    <TextView android:id="@+id/selectedAnswer" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="?" android:textColor="@color/text_dark" android:textSize="42sp" android:textStyle="bold" />
+                </FrameLayout>
+            </LinearLayout>
+            <ProgressBar android:id="@+id/questionProgressBar" style="@android:style/Widget.ProgressBar.Horizontal" android:layout_width="match_parent" android:layout_height="12dp" android:layout_marginTop="12dp" android:progress="40" />
+            <TextView android:id="@+id/progressLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="end" android:layout_marginTop="4dp" android:text="2 / 30 done ✨" android:textColor="@color/text_mid" android:textSize="11sp" android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Numpad Label -->
+    <TextView android:id="@+id/numpadLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="👇 PICK THE ANSWER!" android:textColor="@color/text_mid" android:textSize="12sp" android:textStyle="bold" android:letterSpacing="0.05" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/questionCard" />
+
+    <!-- Number Grid -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/numpad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="6dp"
+        app:columnCount="4"
+        app:layout_constraintTop_toBottomOf="@id/numpadLabel">
+
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn1" style="@style/NumButton" android:background="@drawable/btn_sky" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn2" style="@style/NumButton" android:background="@drawable/btn_mint" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn3" style="@style/NumButton" android:background="@drawable/btn_yellow" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn4" style="@style/NumButton" android:background="@drawable/btn_pink" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn5" style="@style/NumButton" android:background="@drawable/btn_purple" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn6" style="@style/NumButton" android:background="@drawable/btn_sky" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn7" style="@style/NumButton" android:background="@drawable/btn_mint" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn8" style="@style/NumButton" android:background="@drawable/btn_yellow" />
+
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnClear" style="@style/NumButton" android:layout_width="0dp" android:layout_height="64dp" android:background="@drawable/btn_pink" android:text="🔙 Clear" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSubmit" style="@style/NumButton" android:layout_width="0dp" android:layout_height="64dp" android:background="@drawable/btn_purple" android:text="⬆️ Submit" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- Hint Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/btn_hint"
+        android:text="💡 Need a Hint?"
+        android:textAllCaps="false"
+        android:textColor="@color/text_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/numpad" />
+
+    <!-- Hills (Background Bottom) -->
+    <ImageView android:id="@+id/hillsBg" android:layout_width="match_parent" android:layout_height="100dp" android:scaleType="fitXY" app:layout_constraintBottom_toBottomOf="parent" app:srcCompat="@drawable/ic_hills" />
+
+    <!-- Bottom Nav -->
+    <LinearLayout android:id="@+id/bottomNav" android:layout_width="match_parent" android:layout_height="60dp" android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent">
+        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="🎮\nPlay" android:textSize="10sp" android:textStyle="bold" />
+        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:alpha="0.5" android:text="🗺️\nMap" android:textSize="10sp" />
+        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:alpha="0.5" android:text="🏅\nMedals" android:textSize="10sp" />
+        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:alpha="0.5" android:text="⚙️\nSettings" android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- Victory Overlay -->
+    <FrameLayout android:id="@+id/victoryScreen" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#DDFFFFFF" android:elevation="20dp" android:visibility="gone" android:clickable="true" android:focusable="true">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:gravity="center" android:orientation="vertical" android:padding="32dp">
+            <TextView android:id="@+id/victoryTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AMAZING! 🎉" android:textColor="@color/pink_dark" android:textSize="40sp" android:textStyle="bold" />
+            <TextView android:id="@+id/victoryStats" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Score: 0 🌟" android:textColor="@color/text_dark" android:textSize="24sp" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnPlayAgain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:background="@drawable/btn_purple" android:paddingHorizontal="32dp" android:text="Play Again" android:textColor="@color/text_dark" android:textStyle="bold" android:backgroundTint="@null"/>
+        </LinearLayout>
+        <nl.dionsegijn.konfetti.xml.KonfettiView android:id="@+id/konfettiView" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
