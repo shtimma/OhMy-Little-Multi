@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFEF9</color>
+    <color name="text_dark">#3D2B6B</color>
+    <color name="text_mid">#5A4080</color>
+
+    <!-- 3D Button Palettes (Start, End, Shadow) -->
+    <!-- Sky -->
+    <color name="btn_sky_start">#A8D8F0</color>
+    <color name="btn_sky_end">#70BCDF</color>
+    <color name="btn_sky_shadow">#5A9AB8</color>
+
+    <!-- Mint -->
+    <color name="btn_mint_start">#A8E6CF</color>
+    <color name="btn_mint_end">#70D4A8</color>
+    <color name="btn_mint_shadow">#59AA86</color>
+
+    <!-- Yellow -->
+    <color name="btn_yellow_start">#FFE899</color>
+    <color name="btn_yellow_end">#FFD44D</color>
+    <color name="btn_yellow_shadow">#CCAA3D</color>
+
+    <!-- Pink -->
+    <color name="btn_pink_start">#FFB3C6</color>
+    <color name="btn_pink_end">#FF85A1</color>
+    <color name="btn_pink_shadow">#CC6A81</color>
+
+    <!-- Purple -->
+    <color name="btn_purple_start">#D4BCEE</color>
+    <color name="btn_purple_end">#B899E2</color>
+    <color name="btn_purple_shadow">#937AB5</color>
+
+    <!-- Answer Slot Yellow -->
+    <color name="yellow_start">#FFE066</color>
+    <color name="yellow_end">#FFCC00</color>
+
+    <color name="btn_gloss">#73FFFFFF</color>
+    <color name="pink_dark">#FF85A1</color>
+
+    <!-- UI Elements -->
+    <color name="shadow">#B8D9F2</color>
+
+    <!-- Main Background Gradient -->
+    <color name="bg_gradient_start">#E0F2FF</color>
+    <color name="bg_gradient_mid">#F0F9FF</color>
+    <color name="bg_gradient_end">#FFFFFF</color>
+</resources>
