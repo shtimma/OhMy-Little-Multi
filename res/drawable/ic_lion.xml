@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Mane -->
+    <path
+        android:fillColor="#FFB347"
+        android:pathData="M60,62m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0" />
+    <!-- Mane spikes (Simplified) -->
+    <path android:fillColor="#FFA020" android:pathData="M60,8m18,14a18,14 0,1 1,-36 0a18,14 0,1 1,36 0"/>
+    <!-- Face -->
+    <path
+        android:fillColor="#FFDD88"
+        android:pathData="M60,62m-32,0a32,32 0,1 1,64 0a32,32 0,1 1,-64 0" />
+    <!-- Eyes -->
+    <path android:fillColor="#FFFFFF" android:pathData="M49,55m-8,0a8,9 0,1 1,16 0a8,9 0,1 1,-16 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M71,55m-8,0a8,9 0,1 1,16 0a8,9 0,1 1,-16 0"/>
+    <path android:fillColor="#3D2B6B" android:pathData="M50,56m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+    <path android:fillColor="#3D2B6B" android:pathData="M72,56m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+    <!-- Nose -->
+    <path android:fillColor="#FF85A1" android:pathData="M60,68m-8,0a8,5 0,1 1,16 0a8,5 0,1 1,-16 0"/>
+</vector>

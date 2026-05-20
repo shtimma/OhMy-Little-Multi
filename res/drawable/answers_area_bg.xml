@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow -->
+    <item>
+        <shape>
+            <solid android:color="@color/shadow" />
+            <corners android:radius="32dp" />
+        </shape>
+    </item>
+    <!-- Surface -->
+    <item android:bottom="6dp">
+        <shape>
+            <solid android:color="#F0F9FF" />
+            <corners android:radius="32dp" />
+            <stroke android:width="2dp" android:color="#B8E4F7" />
+        </shape>
+    </item>
+</layer-list>

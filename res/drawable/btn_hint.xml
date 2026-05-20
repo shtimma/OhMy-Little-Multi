@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:top="4dp">
+                <shape>
+                    <gradient android:angle="315" android:startColor="@color/btn_mint_start" android:endColor="@color/btn_mint_end" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <!-- Глубокая тень как в HTML (0 6px 0 rgba(80,180,130,0.4)) -->
+            <item android:top="6dp">
+                <shape>
+                    <solid android:color="@color/btn_mint_shadow" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+            <!-- Основная кнопка -->
+            <item android:bottom="6dp">
+                <shape>
+                    <gradient android:angle="315" android:startColor="@color/btn_mint_start" android:endColor="@color/btn_mint_end" />
+                    <corners android:radius="24dp" />
+                </shape>
+            </item>
+            <!-- Блик -->
+            <item android:top="10dp" android:left="16dp" android:right="120dp" android:bottom="48dp">
+                <shape>
+                    <solid android:color="@color/btn_gloss" />
+                    <corners android:radius="10dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Тень снизу -->
+    <item android:top="4dp">
+        <shape>
+            <solid android:color="@color/btn_yellow_shadow" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+    <!-- Основное тело -->
+    <item android:bottom="4dp">
+        <shape>
+            <gradient
+                android:angle="315"
+                android:startColor="@color/yellow_start"
+                android:endColor="@color/yellow_end" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+    <!-- Блик (Gloss) -->
+    <item android:top="8dp" android:left="12dp" android:right="45dp" android:bottom="45dp">
+        <shape>
+            <solid android:color="@color/btn_gloss" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</layer-list>

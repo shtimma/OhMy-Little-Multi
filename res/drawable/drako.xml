@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Тело с глубоким радиальным градиентом для объема -->
+    <path android:pathData="M60,95 C35,95 25,75 25,60 C25,45 35,25 60,25 C85,25 95,45 95,60 C95,75 85,95 60,95 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="60"
+                android:centerY="50"
+                android:gradientRadius="45"
+                android:type="radial">
+                <item android:color="#A8E6CF" android:offset="0" />
+                <item android:color="#6DD5A8" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Животик (светлый блик) -->
+    <path android:pathData="M60,85 C48,85 40,75 40,65 C40,55 48,45 60,45 C72,45 80,55 80,65 C80,75 72,85 60,85 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="60"
+                android:centerY="70"
+                android:gradientRadius="25"
+                android:type="radial">
+                <item android:color="#FFFFFF" android:offset="0" />
+                <item android:color="#E0F7FA" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Крылья с 3D тенью -->
+    <path android:fillColor="#5CB894" android:pathData="M25,50 Q10,30 20,20 L35,40 Z" />
+    <path android:fillColor="#5CB894" android:pathData="M95,50 Q110,30 100,20 L85,40 Z" />
+    <path android:fillColor="#81C784" android:pathData="M27,48 Q15,32 23,24 L33,38 Z" />
+    <path android:fillColor="#81C784" android:pathData="M93,48 Q105,32 97,24 L87,38 Z" />
+
+    <!-- Голова (3D сфера) -->
+    <path android:pathData="M60,45 C48,45 40,35 40,25 C40,15 48,5 60,5 C72,5 80,15 80,25 C80,35 72,45 60,45 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="55"
+                android:centerY="15"
+                android:gradientRadius="30"
+                android:type="radial">
+                <item android:color="#A8E6CF" android:offset="0" />
+                <item android:color="#5CB894" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Глаза с бликами (3D эффект) -->
+    <!-- Левый глаз -->
+    <path android:fillColor="#FFFFFF" android:pathData="M52,18 A7,7 0 1,1 52,32 A7,7 0 1,1 52,18 Z" />
+    <path android:fillColor="#3D2B6B" android:pathData="M52,22 A4,4 0 1,1 52,30 A4,4 0 1,1 52,22 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M53.5,23.5 A1.5,1.5 0 1,1 53.5,26.5 A1.5,1.5 0 1,1 53.5,23.5 Z" />
+
+    <!-- Правый глаз -->
+    <path android:fillColor="#FFFFFF" android:pathData="M68,18 A7,7 0 1,1 68,32 A7,7 0 1,1 68,18 Z" />
+    <path android:fillColor="#3D2B6B" android:pathData="M68,22 A4,4 0 1,1 68,30 A4,4 0 1,1 68,22 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M69.5,23.5 A1.5,1.5 0 1,1 69.5,26.5 A1.5,1.5 0 1,1 69.5,23.5 Z" />
+
+    <!-- Рожки -->
+    <path android:fillColor="#FFD54F" android:pathData="M45,10 Q40,0 50,5 Z" />
+    <path android:fillColor="#FFD54F" android:pathData="M75,10 Q80,0 70,5 Z" />
+
+    <!-- Улыбка -->
+    <path android:strokeColor="#5A4080" android:strokeWidth="2.5" android:strokeLineCap="round" android:pathData="M53,37 Q60,42 67,37" />
+</vector>
