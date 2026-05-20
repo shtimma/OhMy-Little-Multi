@@ -1,1 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
 
+    <!-- Ground Shadow -->
+    <path
+        android:fillColor="#153D2B6B"
+        android:pathData="M60,115c25,0 45,-8 45,-18s-20,-18 -45,-18s-45,8 -45,18s20,18 45,18z" />
+
+    <!-- Main Body with 3D Depth -->
+    <path android:pathData="M60,90c-25,0 -45,-20 -45,-45s20,-45 45,-45s45,20 45,45s-20,45 -45,45z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="60"
+                android:centerY="45"
+                android:gradientRadius="45"
+                android:type="radial">
+                <item android:color="#B8E4F7" android:offset="0" />
+                <item android:color="#70BCDF" android:offset="0.8" />
+                <item android:color="#5A99B8" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Tummy / Belly -->
+    <path android:pathData="M60,85c-18,0 -32,-12 -32,-28s14,-28 32,-28s32,12 32,28s-14,28 -32,28z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="60"
+                android:centerY="65"
+                android:gradientRadius="32"
+                android:type="radial">
+                <item android:color="#FFFFFF" android:offset="0" />
+                <item android:color="#F0F8FF" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Wing Left -->
+    <path android:pathData="M25,55c-15,0 -20,20 -15,35c5,10 15,5 15,-5z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="10"
+                android:startY="55"
+                android:endX="25"
+                android:endY="90"
+                android:type="linear">
+                <item android:color="#87CEEB" android:offset="0" />
+                <item android:color="#5A99B8" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Wing Right -->
+    <path android:pathData="M95,55c15,0 20,20 15,35c-5,10 -15,5 -15,-5z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="110"
+                android:startY="55"
+                android:endX="95"
+                android:endY="90"
+                android:type="linear">
+                <item android:color="#87CEEB" android:offset="0" />
+                <item android:color="#5A99B8" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Head Tufts (Ears) -->
+    <path
+        android:fillColor="#70BCDF"
+        android:pathData="M38,22l-18,-12l12,18z" />
+    <path
+        android:fillColor="#70BCDF"
+        android:pathData="M82,22l18,-12l-12,18z" />
+
+    <!-- Eye Sockets (White areas) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,45m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,45m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0" />
+
+    <!-- Irises -->
+    <path android:pathData="M45,45m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="45"
+                android:centerY="45"
+                android:gradientRadius="15"
+                android:type="radial">
+                <item android:color="#FFE899" android:offset="0.4" />
+                <item android:color="#FFD44D" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M75,45m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="75"
+                android:centerY="45"
+                android:gradientRadius="15"
+                android:type="radial">
+                <item android:color="#FFE899" android:offset="0.4" />
+                <item android:color="#FFD44D" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Pupils -->
+    <path
+        android:fillColor="#3D2B6B"
+        android:pathData="M45,45m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+    <path
+        android:fillColor="#3D2B6B"
+        android:pathData="M75,45m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+
+    <!-- Eye Sparkles -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M41,41a3.5,3.5 0,1 1,7 0a3.5,3.5 0,1 1,-7 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M71,41a3.5,3.5 0,1 1,7 0a3.5,3.5 0,1 1,-7 0" />
+
+    <!-- Beak (3D) -->
+    <path android:pathData="M60,52l-8,14l16,0z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="60"
+                android:startY="52"
+                android:endX="60"
+                android:endY="66"
+                android:type="linear">
+                <item android:color="#FFD44D" android:offset="0" />
+                <item android:color="#FFB347" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Feet -->
+    <path
+        android:fillColor="#FFB347"
+        android:pathData="M45,90l-5,10l10,0zM75,90l-5,10l10,0z" />
+
+</vector>
